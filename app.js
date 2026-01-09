@@ -156,6 +156,7 @@ let isSessionStarted = false;
 let bookmarks = JSON.parse(localStorage.getItem('n400_bookmarks_v2')) || { personal: [], part9: [], glossary: [] };
 let currentTab = 'personal';
 let synth = window.speechSynthesis;
+let currentVoice = null;
 let audioTimeout = null;
 let audioSequenceTimeouts = [];
 
@@ -387,9 +388,38 @@ function speakText(text, showAnim = false) {
             utterance.lang = 'en-US';
             utterance.rate = 0.9;
 
-            // 設置語音（如果有特定 ID 可以在此加入）
-            const voices = synth.getVoices();
-            utterance.voice = voices[142] || voices[0];
+            // 定義一個函數來選取最好的聲音
+function getBestVoice() {
+    let voices = synth.getVoices();
+    
+    // 優先順序：1. iPhone 的 Samantha | 2. Google 的高品質音 | 3. 任何 en-US 的聲音
+    return voices.find(v => v.name.includes('Samantha')) || 
+           voices.find(v => v.name.includes('Google US English')) ||
+           voices.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
+           voices.find(v => v.lang.startsWith('en-US')) ||
+           voices[0];
+}
+
+// 播放函數
+function speak(text) {
+    if (synth.speaking) { synth.cancel(); } // 如果正在說話，先停止
+
+    const utterance = new SpeechSynthesisUtterance(text);
+    
+    // 關鍵：每次播放前重新獲取一次最好的聲音，確保手機已加載完成
+    utterance.voice = getBestVoice();
+    
+    // 參數調整
+    utterance.rate = 0.85;  // 稍慢，適合練習
+    utterance.pitch = 1.0;  // 音調正常
+    
+    synth.speak(utterance);
+}
+
+// 解決 Chrome/Safari 的異步加載問題
+if (speechSynthesis.onvoiceschanged !== undefined) {
+    speechSynthesis.onvoiceschanged = getBestVoice;
+}
 
             // 動態效果控制
             if (showAnim) {
