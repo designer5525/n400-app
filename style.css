@@ -450,4 +450,40 @@
         .list-text { flex: 1; font-size: 16px; line-height: 1.4; }
         .list-remove { color: var(--danger); font-size: 20px; cursor: pointer; padding: 5px; }
 
+        .contact-section {
+    margin-top: 40px;
+    padding: 20px 10px;
+    text-align: center;
+    border-top: 1px solid #eeeeee;
+}
+
+.contact-text {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.xiaohongshu-btn {
+    background-color: #ff2442; /* 小紅書品牌紅 */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 36, 66, 0.2);
+    transition: transform 0.2s;
+}
+
+.xiaohongshu-btn:active {
+    transform: scale(0.95); /* 點擊時的縮放效果，增加手感 */
+}
+
+.version-text {
+    font-size: 11px;
+    color: #cccccc;
+    margin-top: 15px;
+}
+
     </style>
