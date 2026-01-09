@@ -199,7 +199,6 @@ function initVisitorStats() {
     if(todayElement) todayElement.innerText = today;
 }
 
-window.addEventListener('load', initVisitorStats);
 // 確保在頁面加載後運行
 window.addEventListener('load', initVisitorStats);
 
