@@ -177,6 +177,30 @@ const mainBtn = document.getElementById('main-btn');
 
 // --- FUNCTIONS ---
 
+async function initVisitorStats() {
+    const namespace = "sandy-n400-app"; // 這是你的專屬命名空間
+    const today = new Date().toISOString().split('T')[0]; // 獲取今天日期，例如 2026-01-09
+
+    try {
+        // 1. 獲取並增加總訪問量
+        const totalRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/total`);
+        const totalData = await totalRes.json();
+        document.getElementById('total-count').innerText = totalData.value;
+
+        // 2. 獲取並增加今日訪問量 (使用日期作為 key)
+        const todayRes = await fetch(`https://api.countapi.xyz/hit/${namespace}/day-${today}`);
+        const todayData = await todayRes.json();
+        document.getElementById('today-count').innerText = todayData.value;
+
+    } catch (error) {
+        console.log("Stats update failed", error);
+        // 如果 API 失敗，隱藏統計區塊以免影響美觀
+        document.getElementById('stats-monitor').style.display = 'none';
+    }
+}
+
+// 確保在頁面加載後運行
+window.addEventListener('load', initVisitorStats);
 
 
 // 洗牌
