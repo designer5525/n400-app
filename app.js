@@ -207,8 +207,14 @@ function goToXiaohongshu() {
     // 請將下方的網址替換為你複製的小紅書主頁連結
     const myRedBookUrl = "https://www.xiaohongshu.com/user/profile/631f3bfd00000000230254b1";
     
-    // 在新視窗打開小紅書
-    window.open(myRedBookUrl, "_blank");
+   // 判斷是否為電腦端 (如果寬度大於 1024px 通常是電腦)
+    if (window.innerWidth > 1024) {
+        // 電腦端：強制開啟新分頁，避免被原頁面攔截
+        window.open(myRedBookUrl, "_blank");
+    } else {
+        // 手機端：保持現有的跳轉方式，這能呼起小紅書 App
+        window.location.href = myRedBookUrl;
+    }
 }
 
 // 洗牌
