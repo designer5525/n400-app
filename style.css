@@ -320,34 +320,38 @@
             justify-content: center;
         }
         
-        /* 主按鈕：藍紫色漸變效果 */
+       /* 基礎樣式：白色背景（用於「下一題」） */
 .main-action-btn {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     border: none;
-    /* 藍紫色漸變：從亮藍到紫羅蘭 */
-    background: linear-gradient(135deg, #6e8efb, #a777e3); 
-    color: white !important; /* 強制文字為白色 */
+    background: white; /* 練習時變回白色 */
+    color: black;      /* 文字變黑 */
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    /* 藍紫色光暈陰影 */
-    box-shadow: 0 8px 15px rgba(110, 142, 251, 0.4); 
+    box-shadow: 0 8px 15px rgba(110, 142, 251, 0.4); /* 保留藍色陰影 */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease; /* 平滑過渡 */
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* 增加彈性動畫感 */
     outline: none;
-    -webkit-tap-highlight-color: transparent; /* 移除手機點擊時的藍色外框 */
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* 點擊時的微縮放反饋 */
-.main-action-btn:active {
-    transform: scale(0.92); /* 按下時縮小 */
-    box-shadow: 0 4px 8px rgba(110, 142, 251, 0.3); /* 陰影隨之變小 */
-    filter: brightness(0.9); /* 顏色稍微變深，增加受力感 */
+/* 彩色樣式：藍紫漸變（用於「開始面試」） */
+.main-action-btn.colorful {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white !important;
 }
+
+/* 點擊縮放動畫（確保對所有狀態有效） */
+.main-action-btn:active {
+    transform: scale(0.85); /* 縮小幅度稍微大一點，反饋更明顯 */
+}
+
+
 
         .bottom-actions {
             display: flex;
