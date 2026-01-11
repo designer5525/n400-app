@@ -246,17 +246,33 @@ function startSession(mode, catId = 0) {
 //主按鈕
 function handleMainAction() {
     const mainBtn = document.getElementById('main-btn');
+    
+    // --- 1. 強化縮放手感 (解決你說的縮放沒實現問題) ---
+    mainBtn.style.transform = "scale(0.88)";
+    setTimeout(() => {
+        mainBtn.style.transform = ""; 
+    }, 100);
 
-    if (mainBtn.innerHTML.includes("開始")) {
-        // 執行開始面試邏輯...
+    // --- 2. 判斷邏輯 ---
+    if (mainBtn.classList.contains('colorful')) {
+        // 【第一次點擊：從 開始面試 變成 我回答完了】
         
-        // 切換文字
-        mainBtn.innerHTML = "下一題";
-        
-        // 移除彩色類別，按鈕會自動變回 CSS 定義的白色背景
+        // 執行開始面試的初始化邏輯 (例如：播放第一題音頻)
+        if (typeof startInterview === "function") startInterview(); 
+
+        // 核心動作：移除彩色類別 (變回白色)
         mainBtn.classList.remove('colorful');
+        
+        // 變更文字為你需要的
+        mainBtn.innerHTML = "我回答<br>完了";
+        
     } else {
-        // 執行下一題邏輯...
+        // 【後續點擊：執行下一題邏輯】
+        if (typeof showNextQuestion === "function") showNextQuestion();
+        
+        // 如果你希望文字一直保持「我回答完了」，這裡就不動
+        // 如果你希望變成「下一題」，可以改寫：
+        // mainBtn.innerHTML = "下一題";
     }
 }
 
