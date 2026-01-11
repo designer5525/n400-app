@@ -342,7 +342,7 @@
 }
 
 /* 2. 初始樣式：藍紫漸變（當含有 .colorful 時） */
-.main-action-btn.colorful {
+button.main-action-btn.colorful {
     background: linear-gradient(135deg, #6e8efb, #a777e3) !important;
     color: #FFFFFF !important;
 }
