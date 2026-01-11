@@ -173,13 +173,13 @@ const qCounter = document.getElementById('q-current');
 const qTotal = document.getElementById('q-total');
 const starBtn = document.getElementById('btn-star');
 const mainBtn = document.getElementById('main-btn');
+const namespace = "sandy-n400-app"; // 這是你的專屬命名空間
+const today = new Date().toISOString().split('T')[0]; // 獲取今天日期，例如 2026-01-09
 
 
 // --- FUNCTIONS ---
 
 async function initVisitorStats() {
-    const namespace = "sandy-n400-app"; // 這是你的專屬命名空間
-    const today = new Date().toISOString().split('T')[0]; // 獲取今天日期，例如 2026-01-09
 
     try {
         // 1. 獲取並增加總訪問量
