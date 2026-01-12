@@ -32,7 +32,7 @@ const mainBtn = document.getElementById('main-btn');
 // --- FUNCTIONS ---
 
 // --- 新增：從 CSV 載入資料並關聯 ---
-async function loadN400Data() {
+async function Data() {
     try {
         // 使用時間戳防止緩存
         const response = await fetch('n400_data.csv?t=' + Date.now());
@@ -67,6 +67,7 @@ async function loadN400Data() {
                     chinese: trans,
                     def: extra,
                     phonetic: "" // 如果需要音標可加在 CSV 第五欄
+                    cat: catVal
                 });
             }
         }
