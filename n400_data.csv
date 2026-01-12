@@ -1,10 +1,224 @@
 Type,Content,Translation,Extra,cat
-personal,"Why are you here today?",,,
-personal,"What's the purpose of you being here today?",,,
-personal,"How did you get your green card?",,,
-part9,"Have you EVER claimed to be a U.S. citizen?",你是否曾聲稱自己是美國公民？,,
-part9,"Have you EVER registered to vote or voted in the United States?",你是否曾在美國登記投票？,,
-glossary,Claim,聲稱,Means To say something,1
-glossary,Registered,登記,Means To sign up,2
-glossary,Owe taxes,欠稅,Means Not pay money to government,3
-glossary,Owe taxes,欠稅,Means Not pay money to government,4
+personal,"Why are you here today?","為什麼你今天在這裡？","",0
+personal,"What's the purpose of you being here today?","你今天在這裡的目的是什麼？","",0
+personal,"Why are you come here today?","你今天為什麼來這裡？","",0
+personal,"Why are you eligible for the naturalization?","為什麼你有資格入籍？","",0
+personal,"What's the reason of you being here today?","你今天在這裡的原因是什麼？","",0
+personal,"What's the eligibility of your naturalization?","你入籍的資格是什麼？","",0
+personal,"For what reason do you file the N-400 form?","你出於什麼原因提交 N-400 表格？","",0
+personal,"What's the reason of filing the N-400 form?","提交 N-400 表格的原因是什麼？","",0
+personal,"What's the basis of filing this form?","提交此表格的依據是什麼？","",0
+personal,"Are you filing the form under the general provision?","你是根據一般條款提交表格的嗎？","",0
+personal,"What's your basis for eligibility?","你的資格依據是什麼？","",0
+personal,"how did you get your green card?","你是如何獲得綠卡的？","",0
+personal,"how did you become a permanent resident?","你是如何成為永久居民的？","",0
+personal,"Who sponsored you?","誰擔保你的？","",0
+personal,"what's your sponsor's name?","擔保人的名字是什麼？","",0
+personal,"when did your sponsor become us citizen?","你的擔保人什麼時候成為美國公民的？","",0
+personal,"Why are you eligible to become a U.S. citizen?","為什麼你有資格成為美國公民？","",0
+personal,"What's your legal name?","你的法定姓名是什麼？","",0
+personal,"Can you confirm your legal name?","你能確認你的法定姓名嗎？","",0
+personal,"Could you state your full name for me?","你能為我陳述你的全名嗎？","",0
+personal,"Do you have any other names before?","你以前有過其他名字嗎？","",0
+personal,"Do you have nickname?","你有綽號嗎？","",0
+personal,"Do you have previous name?","你有以前的名字嗎？","",0
+personal,"What's your first name?","你的名字（First Name）是什麼？","",0
+personal,"What's your last name?","你的姓氏（Last Name）是什麼？","",0
+personal,"Can you spell your first name?","你能拼寫你的名字嗎？","",0
+personal,"Can you spell your last name?","你能拼寫你的姓氏嗎？","",0
+personal,"Would you like to legally change your name today?","你今天想合法更改姓名嗎？","",0
+personal,"have you ever changed your name before?","你以前改過名字嗎？","",0
+personal,"so you just want to keep your current name, right?","所以你只想保留現在的名字，對嗎？","",0
+personal,"What's your date of birth?","你的出生日期是什麼？","",0
+personal,"On what date were you born?","你是哪一天出生的？","",0
+personal,"When were you born?","你什麼時候出生的？","",0
+personal,"When did you become a permanent resident?","你什麼時候成為永久居民的？","",0
+personal,"When did you get your green card?","你什麼時候拿到綠卡的？","",0
+personal,"do you have another country of nationality?","你有其他國籍嗎？","",0
+personal,"Where were you born?","你在哪裡出生？","",0
+personal,"What country were you born in?","你在哪個國家出生？","",0
+personal,"What's your nationality?","你的國籍是什麼？","",0
+personal,"Are you still a citizen of that country?","你還是那個國家的公民嗎？","",0
+personal,"Does any of your parents US citizens?","你的父母中有美國公民嗎？","",0
+personal,"Was one of your parents a U.S. citizen before your 18th birthday?","在你的 18 歲生日之前，你的父母中有一位是美國公民嗎？","",0
+personal,"Does your father US citizen?","你的父親是美國公民嗎？","",0
+personal,"Does your mother US citizen?","你的母親是美國公民嗎？","",0
+personal,"Do you want the Social Security Administration to issue you an original or replacement social security card?","你是否希望社會安全局為你核發原始或更換的社會安全卡？","",0
+personal,"What's the last four numbers of your Social security card?","你社會安全卡的最後四位數字是多少？","",0
+personal,"what's your alien register number?","你的外籍登記號碼是多少？","",0
+personal,"what's your social security number?","你的社會安全號碼是多少？","",0
+personal,"Do you want the Social Security Administration to issue you a card?","你想要社會安全局給你發一張卡嗎？","",0
+personal,"Can you give me the last four numbers of your SSN?","你能給我 SSN 的最後四位數字嗎？","",0
+personal,"Do you want us to notify the SSA to update your status?","你希望我們通知 SSA 更新你的身分嗎？","",0
+personal,"What's your ethnicity?","你的族裔（Ethnicity）是什麼？","",0
+personal,"What's your race?","你的種族（Race）是什麼？","",0
+personal,"Are you Asian?","你是亞洲人嗎？","",0
+personal,"Do you promise that everything you say is true?","你保證你所說的一切都是真實的嗎？","",0
+personal,"What's your height?","你的身高是多少？","",0
+personal,"How tall are you?","你有多高？","",0
+personal,"What's your weight?","你的體重是多少？","",0
+personal,"How much do you weigh?","你體重多少？","",0
+personal,"What's your eye color?","你的眼睛是什麼顏色？","",0
+personal,"What color are your eyes?","你的眼睛是什麼顏色？","",0
+personal,"What's the color of your hair?","你的頭髮是什麼顏色？","",0
+personal,"What's your hair color?","你的髮色是什麼？","",0
+personal,"What's the best number to reach you?","聯繫你的最佳號碼是多少？","",0
+personal,"What's your phone number?","你的電話號碼是多少？","",0
+personal,"What is your cell phone number?","你的手機號碼是多少？","",0
+personal,"Do you have email?","你有電子郵件嗎？","",0
+personal,"Where do you live now?","你現在住在哪裡？","",0
+personal,"What's your current physical address?","你目前的居住地址是什麼？","",0
+personal,"Has your address changed since submitting your application?","提交申請後你的地址有變動嗎？","",0
+personal,"how long have you lived in your current address?","你在現地址住了多久？","",0
+personal,"When did you move to current address?","你什麼時候搬到現地址的？","",0
+personal,"Have you ever lived anywhere eles during the last five years?","在過去五年中你還住過其他地方嗎？","",0
+personal,"did you live anywhere eles before?","你以前住過其他地方嗎？","",0
+personal,"where did you get married?","你在哪裡結婚的？","",0
+personal,"When did you married?","你什麼時候結婚的？","",0
+personal,"What date did you enter into married?","你哪天進入婚姻的？","",0
+personal,"Where did you live before?","你以前住在哪裡？","",0
+personal,"Is your mailing address the same as your physical address?","你的通訊地址與居住地址相同嗎？","",0
+personal,"Where did you live previously?","你以前住在哪裡？","",0
+personal,"What's your previous address? and when did you lived there?","你以前的地址是什麼？你什麼時候住在那裡的？","",0
+personal,"Who do you live with?","你和誰住在一起？","",0
+personal,"Is your current physical address also your current mailing address?","你目前的居住地址也是目前的通訊地址嗎？","",0
+personal,"What's your current marital status?","你目前的婚姻狀況是什麼？","",0
+personal,"Are you single?","你是單身嗎？","",0
+personal,"Are you married?","你結婚了嗎？","",0
+personal,"How many times have you been married?","你結過幾次婚？","",0
+personal,"Is your spouse a current member of the U.S. armed forces?","你的配偶目前是美國武裝部隊的成員嗎？","",0
+personal,"What's your spouse's name?","你配偶的名字是什麼？","",0
+personal,"Do you have any children?","你有孩子嗎？","",0
+personal,"Are you currently employed?","你目前有工作嗎？","",0
+personal,"are you currently working?","你目前在工作嗎？","",0
+personal,"Who's your current employer?","你目前的雇主是誰？","",0
+personal,"What do you do for a living?","你靠什麼謀生？","",0
+personal,"Where do you work now?","你現在在哪裡工作？","",0
+personal,"What's your occupation?","你的職業是什麼？","",0
+personal,"What do you do previously? and since when did you work for that job?","你以前做什麼？從什麼時候開始做那份工作的？","",0
+personal,"Since when did you work at your current company","你從什麼時候開始在目前的這家公司工作的？","",0
+personal,"How long have you been working for your current job?","你做目前這份工作多久了？","",0
+personal,"Since when did you work there?","你從什麼時候開始在那裡工作的？","",0
+personal,"Did you travel abroad after submitting your N-400 application form?","提交 N-400 申請表後你有出國旅行嗎？","",0
+personal,"Where did you go for travel during the last five years?","過去五年你去了哪裡旅行？","",0
+personal,"When and where did you go for travel during the last five years?","過去五年你什麼時候去了哪裡旅行？","",0
+personal,"How many total days did you spend outside the United States during the last five years?","在過去的五年中，你在美國境外總共待了多少天？","",0
+personal,"How many total trips did you take for the last five years?","在過去的五年中，你總共出國旅行了多少次？","",0
+personal,"how many trips have you taken outside the U.S. during the last 5 years?","過去 5 年你出國旅行了多少次？","",0
+personal,"Did any of your trips last more than 6 months?","你的旅行中有超過 6 個月的嗎？","",0
+personal,"It's said that you took 4 trips during the last five years, right?","上面說你在過去五年裡旅行了 4 次，對嗎？","",0
+personal,"When is your last trip?","你最後一次旅行是什麼時候？","",0
+personal,"what's the purpose of your last trip?","你最後一次旅行的目的是什麼？","",0
+personal,"Where is your last trip?","你最後一次旅行去了哪裡？","",0
+personal,"what date did you return on the last trip?","最後一次旅行你哪天回來的？","",0
+personal,"When and where is your last trip?","最後一次旅行是什麼時候、去了哪裡？","",0
+personal,"Where did you go for the last trip?","最後一次旅行你去了哪裡？","",0
+personal,"have you filed your tax return last year?","你去年報稅了嗎？","",0
+personal,"do you believed in religion freedom?","你相信宗教自由嗎？","",0
+personal,"Do you have any physical or mental condition that prevents you from learning English or civics?","你有任何生理或心理狀況阻礙你學習英語或公民知識嗎？","",0
+part9,"Have you EVER claimed to be a U.S. citizen (in writing or any other way)?","你是否曾聲稱自己是美國公民（以書面或任何其他方式）？","",0
+part9,"Have you EVER registered to vote or voted in any Federal, state, or local election in the United States?","你是否曾在美國的任何聯邦、州或地方選舉中登記投票或參與投票？","",0
+part9,"Do you currently owe any overdue Federal, state, or local taxes in the United States?","你目前是否在美國欠任何過期的聯邦、州或地方稅款？","",0
+part9,"Since you became a lawful permanent resident, have you ever called yourself a 'nonresident alien' on a Federal, state, or local tax return?","自從你成為合法永久居民後，你是否曾在聯邦、州或地方納稅申報表上稱自己為「非居民外僑」？","",0
+part9,"Have you EVER Been a member of any Communist or totalitarian party?","你是否曾是任何共產黨或極權政黨的成員？","",0
+part9,"Have you EVER Advocated the overthrow of the Government by force?","你是否曾擁護以武力推翻政府？","",0
+part9,"Have you EVER provided money or support to a group that used weapons or explosives?","你是否曾向使用武器或爆炸物的組織提供金錢或支持？","",0
+part9,"Have you EVER participated in genocide or killing any person?","你是否曾參與過種族滅絕或殺害任何人？","",0
+part9,"Have you EVER served in any military or police unit?","你是否曾服役於任何軍隊或警察部隊？","",0
+part9,"Have you EVER served in any armed group, rebel group, or guerrilla group?","你是否曾服役於任何武裝團體、反叛組織或游擊隊？","",0
+part9,"Have you EVER worked in a prison, jail, or detention facility?","你是否曾在監獄、看守所或拘留所工作過？","",0
+part9,"Were you EVER a part of any group that used a weapon against any person?","你是否曾是任何對他人使用武器的團體的一員？","",0
+part9,"Have you EVER sold, provided, or transported weapons?","你是否曾出售、提供或運輸過武器？","",0
+part9,"Have you EVER received any weapons training or military training?","你是否曾接受過任何武器訓練或軍事訓練？","",0
+part9,"Have you EVER used any person under 15 years of age to serve in an armed group?","你是否曾利用過任何未滿 15 歲的人加入武裝團體？","",0
+part9,"Have you EVER used any person under 15 years of age to take part in hostilities?","你是否曾利用過任何未滿 15 歲的人參加敵對行動？","",0
+part9,"Have you EVER committed a crime for which you were NOT arrested?","你是否曾犯下任何你「沒有」被逮捕的罪行？","",0
+part9,"Have you EVER been arrested, cited, or detained by any law enforcement officer?","你是否曾被任何執法官員逮捕、傳喚或拘留？","",0
+part9,"If you received a suspended sentence or probation, have you completed it?","如果你被判處緩刑，你是否已經完成？","",0
+part9,"Have you EVER Engaged in prostitution?","你是否曾從事賣淫？","",0
+part9,"Have you EVER sold or smuggled illegal drugs or narcotics?","你是否曾銷售或走私非法藥物或麻醉品？","",0
+part9,"Have you EVER Been married to more than one person at the same time?","你是否曾同時與超過一人結婚？","",0
+part9,"Have you EVER Married someone in order to obtain an immigration benefit?","你是否曾為了獲得移民利益而與某人結婚？","",0
+part9,"Have you EVER Helped anyone to enter the United States illegally?","你是否曾協助任何人非法進入美國？","",0
+part9,"Have you EVER Gambled illegally?","你是否曾非法賭博？","",0
+part9,"Have you EVER Failed to support your dependents or to pay alimony?","你是否曾未能撫養你的受撫養人或支付贍養費？","",0
+part9,"Have you EVER Made any misrepresentation to obtain any public benefit?","你是否曾為了獲得任何公共福利而做出任何虛假陳述？","",0
+part9,"Have you EVER given any U.S. Government officials any false information?","你是否曾向任何美國政府官員提供過虛假資訊？","",0
+part9,"Have you EVER lied to any U.S. Government officials to gain entry into the U.S.?","你是否曾向任何美國政府官員撒謊以便進入美國？","",0
+part9,"Have you EVER been placed in removal or deportation proceedings?","你是否曾被列入驅逐或遣返程序？","",0
+part9,"Have you EVER been removed or deported from the United States?","你是否曾被從美國移送或驅逐出境？","",0
+part9,"Have you EVER left the United States to avoid being drafted?","你是否曾為了逃避徵兵而離開美國？","",0
+part9,"Have you EVER applied for any kind of exemption from military service?","你是否曾申請過免除服兵役的任何豁免？","",0
+part9,"Have you EVER served in the U.S. armed forces?","你是否曾在美國武裝部隊服役？","",0
+part9,"Are you currently a member of the U.S. armed forces?","你目前是美國武裝部隊的成員嗎？","",0
+part9,"Are you a former U.S. military service member residing outside the U.S.?","你是否是居住在境外的美國退役軍人？","",0
+part9,"Have you EVER been court-martialed while in the U.S. armed forces?","在美國武裝部隊期間，你是否曾受過軍事法庭審判？","",0
+part9,"Have you EVER been discharged from service because you were an alien?","你是否曾因為是外籍人士而退役？","",0
+part9,"Have you EVER deserted from the U.S. armed forces?","你是否曾在美國武裝部隊中逃兵？","",0
+part9,"Do you now have a hereditary title or nobility in any foreign country?","你現在在任何外國擁有世襲頭銜或貴族爵位嗎？","",0
+part9,"Do you support the Constitution and form of Government of the United States?","你是否支持美國憲法和美國政府形式？","",0
+part9,"Do you understand the full Oath of Allegiance to the United States?","你是否理解對美國完整的效忠誓言？","",0
+part9,"Are you unable to take the Oath of Allegiance because of a disability?","你是否因為殘疾而無法進行效忠宣誓？","",0
+part9,"Are you willing to take the full Oath of Allegiance to the United States?","你是否願意宣讀對美國完整的效忠誓言？","",0
+part9,"If the law requires it, are you willing to bear arms on behalf of the United States?","如果法律要求，你是否願意代表美國拿起武器？","",0
+part9,"If the law requires it, are you willing to perform noncombatant services?","如果法律要求，你是否願意從事非戰鬥服務？","",0
+part9,"If the law requires it, are you willing to perform work of national importance?","如果法律要求，你是否願意從事對國家有重大影響的工作？","",0
+glossary,"Claim","聲稱","Means To say something.",1
+glossary,"Registered","登記","Means To sign up.",1
+glossary,"Vote","投票","Means To choose a leader.",1
+glossary,"Owe taxes","欠稅","Means Not pay money to government.",1
+glossary,"Pay taxes","納稅","Means Give money to government.",1
+glossary,"Nonresident","非居民","Means Not living here.",1
+glossary,"Nonresident alien","非居民外僑","Means Not a U.S. resident.",1
+glossary,"Alien","外國人/外僑","Means Not a U.S. citizen.",1
+glossary,"Provide","提供","Means To give.",1
+glossary,"Detained","被拘留","Means Held by the police.",1
+glossary,"Training","訓練","Means Learning how to do something.",1
+glossary,"Arrested","被逮捕","Means Taken by the police.",1
+glossary,"Convicted","被定罪","Means Found guilty by law.",1
+glossary,"Prostitution","賣淫者/賣淫","Means have Sex for money.",1
+glossary,"Prostitute","賣淫者/賣淫","Means have Sex for money.",1
+glossary,"Gamble","賭博","Means Playing for money.",1
+glossary,"Gambling","賭博","Means Playing for money.",1
+glossary,"FALSE","虛假","Means Something is not true.",1
+glossary,"Truth","真相","Means Not a lie.",1
+glossary,"Lie","說謊","Means not tell the truth.",1
+glossary,"Support","支持","Means To agree with.",1
+glossary,"Understand","理解","Means Knowing what it means.",1
+glossary,"Willing","願意","Means agree to do it.",1
+glossary,"Bear arms","持武器","Means use a gun.",1
+glossary,"Terrorist","恐怖分子","Means A violent person.",2
+glossary,"Sabotage","蓄意破壞","Means To damage on purpose.",2
+glossary,"Weapon","武器","Like a gun or knife.",2
+glossary,"Explosive","炸藥","Like a bomb.",2
+glossary,"Kidnapping","綁架","Means Taking someone by force.",2
+glossary,"Assassination","暗殺","Means Killing a leader.",2
+glossary,"Torture","酷刑","Means To hurt someone badly.",2
+glossary,"Genocide","種族滅絕","Means To kill a whole group.",2
+glossary,"Kill","殺害","Means To take a life.",2
+glossary,"Injure","傷害","Means To hurt someone.",2
+glossary,"Crime","犯罪/違法行為","Means Breaking the law.",2
+glossary,"Illegal drugs","毒品","Means Bad medicine.",2
+glossary,"Smuggled","走私","Means Bringing things secretly.",2
+glossary,"Habitual drunkard","習慣性酗酒者","Means Drinks too much alcohol.",2
+glossary,"Polygamy","多配偶制","Means More than one spouse.",2
+glossary,"Illegally","非法","Means Against the law.",2
+glossary,"Noncombatant","非戰鬥","Means Not fighting.",2
+glossary,"Organization","組織/團體","Means A group of people.",3
+glossary,"Communist","共產黨/共產主義","Means No freedom.",3
+glossary,"Communism","共產黨/共產主義","Means No freedom.",3
+glossary,"Totalitarian","極權政黨","Means Government has total control.",3
+glossary,"Totalitarian Party","極權政黨","Means Government has total control.",3
+glossary,"Overthrow","推翻","Means To take down the government.",3
+glossary,"Police unit","警察部隊","Means Law enforcement.",3
+glossary,"Public benefit","公共福利","Means Government help.",3
+glossary,"Constitution","憲法","Means Supreme law of the land.",3
+glossary,"Form of Government","美國政府形式","It's Republic. (or Democracy)",3
+glossary,"Oath / Oath of Allegiance","效忠誓言","Means A promise to be loyal.",3
+glossary,"Prison","監獄","Means Place for criminals.",4
+glossary,"Jail","監獄","Means Place for criminals.",4
+glossary,"Labor camp","勞改營/勞動營","Means a Place for forced work.",4
+glossary,"Military","軍隊","Means The army.",4
+glossary,"Deportation","驅逐出境","Means Forced to leave the U.S.",4
+glossary,"Removed","遣返","Means Sent back to your country.",4
+glossary,"Anywhere in the world","世界任何地方","Means Every place.",4
