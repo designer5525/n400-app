@@ -32,9 +32,9 @@ const mainBtn = document.getElementById('main-btn');
 // --- FUNCTIONS ---
 
 // --- 新增：從 CSV 載入資料並關聯 ---
+// --- 修改後的資料載入函數 ---
 async function Data() {
     try {
-        // 使用時間戳防止緩存
         const response = await fetch('n400_data.csv?t=' + Date.now());
         const data = await response.text();
         const lines = data.split(/\r?\n/).filter(line => line.trim() !== "");
@@ -44,49 +44,45 @@ async function Data() {
         part9Questions = [];
         glossaryData = [];
 
-        // 解析 CSV (跳過第一行標題)
         for (let i = 1; i < lines.length; i++) {
-            // 正則解析：處理雙引號內的逗號
             const matches = lines[i].match(/(".*?"|[^,]+)/g);
             if (!matches) continue;
 
-            const type = matches[0].trim();
+            const type = matches[0].trim().toLowerCase();
             const content = matches[1] ? matches[1].replace(/^"|"$/g, '').trim() : "";
             const trans = matches[2] ? matches[2].replace(/^"|"$/g, '').trim() : "";
             const extra = matches[3] ? matches[3].replace(/^"|"$/g, '').trim() : "";
-            const catVal = matches[4] ? Number(matches[4].trim()) : 0;
+            
+            // 讀取第五欄位並轉為數字
+            const catVal = matches[4] ? parseInt(matches[4].replace(/^"|"$/g, '').trim()) : 0;
 
-            // 根據類型分配到原有的數據結構
             if (type === 'personal') {
                 personalQuestions.push(content);
             } else if (type === 'part9') {
-                // Part 9 原始代碼是把英中合併在一個字串
                 part9Questions.push(`${content} ${trans}`);
             } else if (type === 'glossary') {
                 glossaryData.push({
                     word: content,
                     chinese: trans,
                     def: extra,
-                    phonetic: "" // 如果需要音標可加在 CSV 第五欄
+                    phonetic: "", 
                     cat: catVal
                 });
             }
         }
-        console.log("N400 題庫關聯完成");
+        console.log("N400 題庫載入成功，名詞數量:", glossaryData.length);
     } catch (e) {
         console.error("載入 CSV 失敗:", e);
     }
 }
 
-// --- 在頁面載入時執行 ---
+// 確保執行時名稱一致
 window.addEventListener('DOMContentLoaded', async () => {
-    await Data();
-    // 原有的語音初始化
+    await Data(); 
     window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();
     };
 });
-
 
 // 小紅書跳轉
 function goToXiaohongshu() {
@@ -142,6 +138,11 @@ function startSession(mode, catId = 0) {
         questionQueue = shuffleArray(pool);
     } else if (mode === 'glossary') {
         pool = glossaryData.filter(item => item.cat === catId);
+        if (pool.length === 0 && glossaryData.length > 0) {
+            console.warn(`分類 ID ${catId} 中沒有資料，請檢查 CSV`);
+            // 備選方案：如果分類找不到，顯示全部名詞
+            pool = [...glossaryData]; 
+        }
         questionQueue = shuffleArray(pool);
     }
 
