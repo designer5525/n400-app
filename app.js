@@ -32,7 +32,7 @@ const mainBtn = document.getElementById('main-btn');
 // --- FUNCTIONS ---
 
 // --- 新增：從 CSV 載入資料並關聯 ---
-async function Data() {
+async function loadN400Data() {
     try {
         // 使用時間戳防止緩存
         const response = await fetch('n400_data.csv?t=' + Date.now());
@@ -54,6 +54,7 @@ async function Data() {
             const content = matches[1] ? matches[1].replace(/^"|"$/g, '').trim() : "";
             const trans = matches[2] ? matches[2].replace(/^"|"$/g, '').trim() : "";
             const extra = matches[3] ? matches[3].replace(/^"|"$/g, '').trim() : "";
+            const catVal = matches[4] ? Number(matches[4].trim()) : 0;
 
             // 根據類型分配到原有的數據結構
             if (type === 'personal') {
