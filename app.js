@@ -32,7 +32,7 @@ const mainBtn = document.getElementById('main-btn');
 // --- FUNCTIONS ---
 
 // --- 新增：從 CSV 載入資料並關聯 ---
-async function loadN400Data() {
+async function Data() {
     try {
         // 使用時間戳防止緩存
         const response = await fetch('n400_data.csv?t=' + Date.now());
@@ -80,7 +80,7 @@ async function loadN400Data() {
 
 // --- 在頁面載入時執行 ---
 window.addEventListener('DOMContentLoaded', async () => {
-    await loadN400Data();
+    await Data();
     // 原有的語音初始化
     window.speechSynthesis.onvoiceschanged = () => {
         window.speechSynthesis.getVoices();
