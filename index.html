@@ -6,7 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>US Citizenship N-400 Practice</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 為了確保新加入的內容美觀，這裡補充一點基礎樣式，你可以視情況移至 style.css */
+        .disclaimer-box {
+            background-color: #f2f2f7;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 90%;
+            text-align: left;
+            font-size: 12px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .disclaimer-box strong {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .version-text {
+            margin-top: 15px;
+            color: #8E8E93;
+            font-size: 12px;
+        }
+        .contact-text {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
+
 <body>
 
     <div id="home-screen">
@@ -40,14 +69,24 @@
                 <div class="menu-sub">Glossary</div>
             </div>
         </div>
-        <p style="margin-top: 40px; color: #8E8E93; font-size: 14px;">Select a mode to begin your AI interview simulation.</p>
+        
+        <p style="margin-top: 30px; color: #8E8E93; font-size: 14px;">Select a mode to begin your AI interview simulation.</p>
 
-        <div class="contact-section">
-            <p class="contact-text">💡 您的意見對我很重要</p>
-            <button class="xiaohongshu-btn" onclick="goToXiaohongshu()">
-                如有問題或建議，請點擊聯繫作者
+        <div class="contact-section" style="margin-top: 40px; padding-bottom: 40px;">
+            
+            <div class="disclaimer-box">
+                <strong>免責聲明 / Disclaimer:</strong>
+                本工具僅供學習交流使用，非官方面試軟體。您的所有練習紀錄及個人資料均保存在您的瀏覽器本地，我們不會收集或上傳任何私隱數據。
+                <br><br>
+                This tool is for practice purposes only. All data is stored locally in your browser. We do not collect or upload your personal information.
+            </div>
+
+            <p class="contact-text">💡 覺得好用？歡迎關注與支持</p>
+            <button class="xiaohongshu-btn" onclick="goToXiaohongshu()" style="background-color: #ff2442; color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; cursor: pointer;">
+                前往作者小紅書 (獲取更新/反饋)
             </button>
-            <p class="version-text">N-400 助考工具 V1.0</p>
+            
+            <p class="version-text">N-400 助考工具 V1.0 | Made for Mom</p>
         </div>
     </div>
 
@@ -127,5 +166,11 @@
     </div>
 
     <script src="app.js"></script>
+    <script>
+        // 如果你的 app.js 裡還沒有定義 goToXiaohongshu
+        function goToXiaohongshu() {
+            window.open('你的小紅書個人首頁鏈接', '_blank');
+        }
+    </script>
 </body>
 </html>
