@@ -1,9 +1,10 @@
-Type,Content,Translation,Extra
-personal,"Why are you here today?",,
-personal,"What's the purpose of you being here today?",,
-personal,"How did you get your green card?",,
-part9,"Have you EVER claimed to be a U.S. citizen?",你是否曾聲稱自己是美國公民？,
-part9,"Have you EVER registered to vote or voted in the United States?",你是否曾在美國登記投票？,
-glossary,Claim,聲稱,Means To say something.
-glossary,Registered,登記,Means To sign up.
-glossary,Owe taxes,欠稅,Means Not pay money to government.
+Type,Content,Translation,Extra,cat
+personal,"Why are you here today?",,,
+personal,"What's the purpose of you being here today?",,,
+personal,"How did you get your green card?",,,
+part9,"Have you EVER claimed to be a U.S. citizen?",你是否曾聲稱自己是美國公民？,,
+part9,"Have you EVER registered to vote or voted in the United States?",你是否曾在美國登記投票？,,
+glossary,Claim,聲稱,Means To say something,1
+glossary,Registered,登記,Means To sign up,2
+glossary,Owe taxes,欠稅,Means Not pay money to government,3
+glossary,Owe taxes,欠稅,Means Not pay money to government,4
