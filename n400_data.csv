@@ -95,7 +95,8 @@ personal,"Who's your current employer?","你目前的雇主是誰？","",0
 personal,"What do you do for a living?","你靠什麼謀生？","",0
 personal,"Where do you work now?","你現在在哪裡工作？","",0
 personal,"What's your occupation?","你的職業是什麼？","",0
-personal,"What do you do previously? and since when did you work for that job?","你以前做什麼？從什麼時候開始做那份工作的？","",0
+personal,"What did you do previously? and since when did you work for that job?","你以前做什麼？從什麼時候開始做那份工作的？","",0
+personal,"What did you do previously?","你以前做什麼？","",0
 personal,"Since when did you work at your current company","你從什麼時候開始在目前的這家公司工作的？","",0
 personal,"How long have you been working for your current job?","你做目前這份工作多久了？","",0
 personal,"Since when did you work there?","你從什麼時候開始在那裡工作的？","",0
@@ -167,7 +168,7 @@ glossary,"Claim","聲稱","Means To say something.",1
 glossary,"Registered","登記","Means To sign up.",1
 glossary,"Vote","投票","Means To choose a leader.",1
 glossary,"Owe taxes","欠稅","Means Not pay money to government.",1
-glossary,"Pay taxes","納稅","Means Give money to government.",1
+glossary,"Pay taxes","納稅","Means file taxes / Give money to government.",1
 glossary,"Nonresident","非居民","Means Not living here.",1
 glossary,"Nonresident alien","非居民外僑","Means Not a U.S. resident.",1
 glossary,"Alien","外國人/外僑","Means Not a U.S. citizen.",1
@@ -187,7 +188,7 @@ glossary,"Support","支持","Means To agree with.",1
 glossary,"Understand","理解","Means Knowing what it means.",1
 glossary,"Willing","願意","Means agree to do it.",1
 glossary,"Bear arms","持武器","Means use a gun.",1
-glossary,"Terrorist","恐怖分子","Means A violent person.",2
+glossary,"Terrorist","恐怖分子","Means A violent person/ Means Bad people.",2
 glossary,"Sabotage","蓄意破壞","Means To damage on purpose.",2
 glossary,"Weapon","武器","Like a gun or knife.",2
 glossary,"Explosive","炸藥","Like a bomb.",2
@@ -199,8 +200,8 @@ glossary,"Kill","殺害","Means To take a life.",2
 glossary,"Injure","傷害","Means To hurt someone.",2
 glossary,"Crime","犯罪/違法行為","Means Breaking the law.",2
 glossary,"Illegal drugs","毒品","Means Bad medicine.",2
-glossary,"Smuggled","走私","Means Bringing things secretly.",2
-glossary,"Habitual drunkard","習慣性酗酒者","Means Drinks too much alcohol.",2
+glossary,"Smuggled","走私","Means to take something to a country illegally.",2
+glossary,"Habitual drunkard","習慣性酗酒者","Means Drinking problem/ Drinks too much alcohol.",2
 glossary,"Polygamy","多配偶制","Means More than one spouse.",2
 glossary,"Illegally","非法","Means Against the law.",2
 glossary,"Noncombatant","非戰鬥","Means Not fighting.",2
@@ -219,6 +220,6 @@ glossary,"Prison","監獄","Means Place for criminals.",4
 glossary,"Jail","監獄","Means Place for criminals.",4
 glossary,"Labor camp","勞改營/勞動營","Means a Place for forced work.",4
 glossary,"Military","軍隊","Means The army.",4
-glossary,"Deportation","驅逐出境","Means Forced to leave the U.S.",4
+glossary,"Deportation","驅逐出境","Means Forced to leave the U.S. / Get out from the U.S.",4
 glossary,"Removed","遣返","Means Sent back to your country.",4
 glossary,"Anywhere in the world","世界任何地方","Means Every place.",4
