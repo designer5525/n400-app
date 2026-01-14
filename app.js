@@ -57,7 +57,7 @@ async function Data() {
             const catVal = matches[4] ? parseInt(matches[4].replace(/^"|"$/g, '').trim()) : 0;
 
             if (type === 'personal') {
-                personalQuestions.push(content);
+                personalQuestions.push(`${content} ${trans}`);
             } else if (type === 'part9') {
                 part9Questions.push(`${content} ${trans}`);
             } else if (type === 'glossary') {
