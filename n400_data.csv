@@ -129,6 +129,7 @@ personal,"How long did it take you to be here?","你來這裡花了多長時間�
 personal,"What time is your appointment?","你預約的時間是幾點？","",0
 personal,"Is this your first interview?","這是你第一次面試嗎？","",0
 personal,"Why did you fail last time?","上一次面試為什麼失敗了？","",0
+
 part9,"Have you EVER claimed to be a U.S. citizen (in writing or any other way)?","你是否曾聲稱自己是美國公民（以書面或任何其他方式）？","",0
 part9,"Have you EVER registered to vote or voted in any Federal, state, or local election in the United States?","你是否曾在美國的任何聯邦、州或地方選舉中登記投票或參與投票？","",0
 part9,"Do you currently owe any overdue Federal, state, or local taxes in the United States?","你目前是否在美國欠任何過期的聯邦、州或地方稅款？","",0
@@ -176,6 +177,7 @@ part9,"Are you willing to take the full Oath of Allegiance to the United States?
 part9,"If the law requires it, are you willing to bear arms on behalf of the United States?","如果法律要求，你是否願意代表美國拿起武器？","",0
 part9,"If the law requires it, are you willing to perform noncombatant services?","如果法律要求，你是否願意從事非戰鬥服務？","",0
 part9,"If the law requires it, are you willing to perform work of national importance?","如果法律要求，你是否願意從事對國家有重大影響的工作？","",0
+
 glossary,"Claim","聲稱","Means To say something.",1
 glossary,"Registered","登記","Means To sign up.",1
 glossary,"Vote","投票","Means To choose a leader.",1
