@@ -130,8 +130,7 @@
             justify-content: space-between;
             padding: 40px 20px;
             color: var(--white);
-            position: relative;
-            overflow: hidden;
+            position: relative;      
         }
 
         /* Progress Indicator */
