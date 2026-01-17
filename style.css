@@ -23,7 +23,7 @@
             padding: 0;
             background-color: var(--bg-color);
             height: 100vh;
-            overflow: hidden; /* Prevent whole page scroll */
+            overflow: auto; 
             display: flex;
             flex-direction: column;
         }
@@ -35,7 +35,7 @@
         .btn:active { transform: scale(0.95); }
 
         /* --- Home Screen --- */
-        #home-screen, #glossary-menu-screen,{
+        #home-screen, #glossary-menu-screen {
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -127,13 +127,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start;height: 100%; 
-            padding: 60px 20px 40px 20px; /* 增加頂部 padding 避開進度條 */
+            justify-content: space-between;
+            padding-top: calc(10px + env(safe-area-inset-top)); 
+             padding-bottom: calc(30px + env(safe-area-inset-bottom)); 
+           padding-left: 20px;
+           padding-right: 20px;
+            padding: 40px 20px;
             color: var(--white);
             position: relative;
-            overflow-y: auto; /* 修正重點 3: 允許垂直滾動 */
-            -webkit-overflow-scrolling: touch;
-           }
+            /* 3. 允許滾動 */
+             overflow-y: auto; 
+             -webkit-overflow-scrolling: touch;
+        }
 
         /* Progress Indicator */
         .progress-indicator {
@@ -179,8 +184,8 @@
         }
 
         .officer-avatar {
-            width: 90px;
-            height: 90px;
+            width: 80px;
+            height: 80px;
             background: #2C2C2E;
             border-radius: 50%;
             display: flex;
@@ -191,6 +196,7 @@
             box-shadow: 0 0 20px rgba(88, 86, 214, 0.4);
             margin-bottom: 10px;
             z-index: 2;
+            flex-shrink: 0
         }
 
         .question-box {
@@ -545,3 +551,4 @@ button#main-btn.main-action-btn.colorful {
 }
 
     </style>
+
