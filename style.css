@@ -127,12 +127,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            padding: 40px 20px;
+            justify-content: flex-start;height: 100%; 
+            padding: 60px 20px 40px 20px; /* 增加頂部 padding 避開進度條 */
             color: var(--white);
-            position: relative;      
-            overflow-y: auto;
-        }
+            position: relative;
+            overflow-y: auto; /* 修正重點 3: 允許垂直滾動 */
+            -webkit-overflow-scrolling: touch;
+           }
 
         /* Progress Indicator */
         .progress-indicator {
