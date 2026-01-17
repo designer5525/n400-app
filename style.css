@@ -35,7 +35,7 @@
         .btn:active { transform: scale(0.95); }
 
         /* --- Home Screen --- */
-        #home-screen, #glossary-menu-screen {
+        #home-screen, #glossary-menu-screen,{
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -131,6 +131,7 @@
             padding: 40px 20px;
             color: var(--white);
             position: relative;      
+            overflow-y: auto;
         }
 
         /* Progress Indicator */
