@@ -36,13 +36,20 @@ const mainBtn = document.getElementById('main-btn');
 function getBestVoice() {
     const voices = synth.getVoices();
     
-    // Priority: 1. Samantha (iOS) | 2. Google US | 3. Any enhanced en-US | 4. Any en-US | 5. Any English
-    return voices.find(v => v.name.includes('Samantha')) || 
-           voices.find(v => v.name.includes('Google US English')) ||
-           voices.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
-           voices.find(v => v.lang.startsWith('en-US')) ||
-           voices.find(v => v.lang.startsWith('en-')) ||
-           voices[0];
+    // Filter out non-English voices first (crucial for Chrome on iPad with Chinese system)
+    const englishVoices = voices.filter(v => 
+        v.lang && v.lang.startsWith('en')
+    );
+    
+    // If we have English voices, use them. Otherwise fallback to all voices.
+    const voicePool = englishVoices.length > 0 ? englishVoices : voices;
+    
+    // Priority: 1. Samantha (iOS) | 2. Google US | 3. Any enhanced en-US | 4. Any en-US
+    return voicePool.find(v => v.name.includes('Samantha')) || 
+           voicePool.find(v => v.name.includes('Google US English')) ||
+           voicePool.find(v => v.lang === 'en-US' && v.name.includes('Enhanced')) ||
+           voicePool.find(v => v.lang && v.lang.startsWith('en-US')) ||
+           voicePool[0];
 }
 
 // Load data from CSV
@@ -325,11 +332,17 @@ function speakText(text, showAnim = false) {
     function playNext() {
         if (currentSegment < segments.length) {
             const utterance = new SpeechSynthesisUtterance(segments[currentSegment].trim());
-            utterance.lang = 'en-US';
-            utterance.rate = 0.9;
             
-            // ✅ KEY FIX: Actually assign the English voice!
-            utterance.voice = getBestVoice();
+            // ✅ KEY FIX: Get and assign voice BEFORE setting other properties
+            const selectedVoice = getBestVoice();
+            utterance.voice = selectedVoice;
+            utterance.lang = 'en-US';
+            
+            // ✅ CHROME iPAD FIX: Adjust rate based on voice to prevent slowdown
+            // Chrome on iPad with Chinese system sometimes needs higher rate
+            const isChromeLike = navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Safari');
+            const needsRateBoost = isChromeLike && selectedVoice && !selectedVoice.lang.startsWith('en');
+            utterance.rate = needsRateBoost ? 1.3 : 0.9;
 
             if (showAnim) {
                 utterance.onstart = () => setAnimation(true);
@@ -361,23 +374,28 @@ function speakGlossaryPhrase(word) {
     clearAudio();
     setAnimation(true);
 
-    const rate = 0.85;
     const bestVoice = getBestVoice(); // Get voice once
     
+    // ✅ CHROME iPAD FIX: Detect if we need rate boost
+    const isChromeLike = navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Safari');
+    const needsRateBoost = isChromeLike && bestVoice && !bestVoice.lang.startsWith('en');
+    const rate = needsRateBoost ? 1.2 : 0.85;
+    const wordRate = needsRateBoost ? 1.0 : 0.75;
+    
     const u1 = new SpeechSynthesisUtterance("What does");
+    u1.voice = bestVoice; // ✅ Set voice first
     u1.lang = 'en-US';
     u1.rate = rate;
-    u1.voice = bestVoice; // ✅ Assign voice
 
     const u2 = new SpeechSynthesisUtterance(word);
+    u2.voice = bestVoice; // ✅ Set voice first
     u2.lang = 'en-US';
-    u2.rate = 0.75;
-    u2.voice = bestVoice; // ✅ Assign voice
+    u2.rate = wordRate;
 
     const u3 = new SpeechSynthesisUtterance("mean?");
+    u3.voice = bestVoice; // ✅ Set voice first
     u3.lang = 'en-US';
     u3.rate = rate;
-    u3.voice = bestVoice; // ✅ Assign voice
 
     u1.onend = () => audioSequenceTimeouts.push(setTimeout(() => synth.speak(u2), 200));
     u2.onend = () => audioSequenceTimeouts.push(setTimeout(() => synth.speak(u3), 200));
