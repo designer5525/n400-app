@@ -1,152 +1,267 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-TW">
-<head>
-    <link rel="manifest" href="manifest.json">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <head>
+    <link rel="manifest" href="manifest.json" />
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
     <title>US Citizenship N-400 Practice</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <style>
-        .version-text {
-            margin-top: 15px;
-            color: #8E8E93;
-            font-size: 12px;
-        }
-        .contact-text {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+      .version-text {
+        margin-top: 15px;
+        color: #8e8e93;
+        font-size: 12px;
+      }
+      .contact-text {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="home-screen">
-        <div class="header">
-            <h1>US Citizenship</h1>
-            <h2>N-400 Practice</h2>
+      <div class="header">
+        <h1>US Citizenship</h1>
+        <h2>N-400 Practice</h2>
+      </div>
+      <p class="contact-text">選擇一個模塊進入模擬面試.</p>
+      <div class="grid-menu">
+        <div class="menu-card" onclick="startSession('personal')">
+          <div class="menu-icon">📋</div>
+          <div class="menu-title">個人資料<br />問答練習</div>
+          <div class="menu-sub">Part 1 - 8</div>
         </div>
-         <p class="contact-text">選擇一個模塊進入模擬面試.</p>
-        <div class="grid-menu">
-            <div class="menu-card" onclick="startSession('personal')">
-                <div class="menu-icon">📋</div>
-                <div class="menu-title">個人資料<br>問答練習</div>
-                <div class="menu-sub">Part 1 - 8</div>
-            </div>
 
-            <div class="menu-card" onclick="startSession('part9')">
-                <div class="menu-icon">⚖️</div>
-                <div class="menu-title">Part 9<br>問答練習</div>
-                <div class="menu-sub">Yes / No</div>
-            </div>
-
-            <div class="menu-card light" onclick="showBookmarks()">
-                <div class="menu-icon">⭐️</div>
-                <div class="menu-title">收藏</div>
-                <div class="menu-sub">Bookmarks</div>
-            </div>
-
-            <div class="menu-card light" onclick="showGlossaryMenu()">
-                <div class="menu-icon">📖</div>
-                <div class="menu-title">名詞解釋</div>
-                <div class="menu-sub">Glossary</div>
-            </div>
+        <div class="menu-card orange" onclick="startSession('part9')">
+          <div class="menu-icon">🏛️</div>
+          <div class="menu-title">Part 9<br />問答練習</div>
+          <div class="menu-sub">Yes / No</div>
         </div>
-        
-        <div class="contact-section" style="margin-top: 30px; padding-bottom: 30px;">
-            
-            <p class="contact-text">💡 覺得好用？歡迎關注與支持</p>
-            <button class="xiaohongshu-btn" onclick="goToXiaohongshu()" style="background-color: #ff2442; color: white; border: none; padding: 12px 20px; border-radius: 25px; font-weight: bold; cursor: pointer;">
-                前往作者小紅書 (獲取更新/反饋)
-            </button>
-            <div style="margin-top: 10px; line-height: 1.8;">
-                <p style="margin: 0; color: #8E8E93; font-size: 13px; letter-spacing: 1px;">* 免責聲明 *</p>
-                <p style="margin: 5px 0 0 0; color: #8E8E93; font-size: 12px;">本工具僅供學習交流使用，非官方面試軟體，不對面試結果負責。</p>
-            </div>
-    <p class="version-text" style="margin-top: 10px; color: #C7C7CC; font-size: 12px;">N-400 助考工具 V1.0 | Made for Mom</p>
-</div>
+
+        <div class="menu-card light" onclick="showBookmarks()">
+          <div class="menu-icon">⭐️</div>
+          <div class="menu-title">收藏</div>
+          <div class="menu-sub">Bookmarks</div>
+        </div>
+
+        <div class="menu-card light" onclick="showGlossaryMenu()">
+          <div class="menu-icon">📖</div>
+          <div class="menu-title">名詞解釋</div>
+          <div class="menu-sub">Glossary</div>
+        </div>
+      </div>
+
+      <div
+        class="contact-section"
+        style="margin-top: 30px; padding-bottom: 30px"
+      >
+        <p class="contact-text">💡 覺得好用？歡迎關注與支持</p>
+        <button
+          class="xiaohongshu-btn"
+          onclick="goToXiaohongshu()"
+          style="
+            background-color: #ff2442;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+          "
+        >
+          前往作者小紅書 (獲取更新/反饋)
+        </button>
+        <div style="margin-top: 10px; line-height: 1.8">
+          <p
+            style="
+              margin: 0;
+              color: #8e8e93;
+              font-size: 13px;
+              letter-spacing: 1px;
+            "
+          >
+            * 免責聲明 *
+          </p>
+          <p style="margin: 5px 0 0 0; color: #8e8e93; font-size: 12px">
+            本工具僅供學習交流使用，非官方面試軟體，不對面試結果負責。
+          </p>
+        </div>
+        <p
+          class="version-text"
+          style="margin-top: 10px; color: #c7c7cc; font-size: 12px"
+        >
+          N-400 助考工具 V1.0 | Made for Mom
+        </p>
+      </div>
     </div>
 
     <div id="glossary-menu-screen" class="hidden">
-        <div class="header">
-            <h2>名詞解釋類別</h2>
-        </div>
-        <div class="glossary-list">
-            <button class="btn glossary-item-btn" onclick="startSession('glossary', 1)">
-                <div><span class="icon">👤</span> 個人行為 (Personal Acts)</div>
-                <div>→</div>
-            </button>
-            <button class="btn glossary-item-btn" onclick="startSession('glossary', 2)">
-                <div><span class="icon">🚫</span> 違法行為 (Illegal Acts)</div>
-                <div>→</div>
-            </button>
-            <button class="btn glossary-item-btn" onclick="startSession('glossary', 3)">
-                <div><span class="icon">🏛️</span> 政府組織 (Government)</div>
-                <div>→</div>
-            </button>
-            <button class="btn glossary-item-btn" onclick="startSession('glossary', 4)">
-                <div><span class="icon">📍</span> 地方地點 (Places)</div>
-                <div>→</div>
-            </button>
-        </div>
-        <button class="btn rect-btn" style="margin-top: 40px;" onclick="exitGlossaryMenu()">返回主頁</button>
+      <div class="header">
+        <h2>名詞解釋類別</h2>
+      </div>
+      <div class="glossary-list">
+        <button
+          class="btn glossary-item-btn"
+          onclick="startSession('glossary', 1)"
+        >
+          <div><span class="icon">👤</span> 個人行為 (Personal Acts)</div>
+          <div>→</div>
+        </button>
+        <button
+          class="btn glossary-item-btn"
+          onclick="startSession('glossary', 2)"
+        >
+          <div><span class="icon">🚫</span> 違法行為 (Illegal Acts)</div>
+          <div>→</div>
+        </button>
+        <button
+          class="btn glossary-item-btn"
+          onclick="startSession('glossary', 3)"
+        >
+          <div><span class="icon">🏛️</span> 政府組織 (Government)</div>
+          <div>→</div>
+        </button>
+        <button
+          class="btn glossary-item-btn"
+          onclick="startSession('glossary', 4)"
+        >
+          <div><span class="icon">📍</span> 地方地點 (Places)</div>
+          <div>→</div>
+        </button>
+      </div>
+      <button
+        class="btn rect-btn"
+        style="margin-top: 40px"
+        onclick="exitGlossaryMenu()"
+      >
+        返回主頁
+      </button>
     </div>
 
     <div id="practice-screen" class="hidden">
-        <div class="progress-indicator">
-            <span id="q-current">1</span> / <span id="q-total">30</span>
-        </div>
+      <div class="progress-indicator">
+        <span id="q-current">1</span> / <span id="q-total">30</span>
+      </div>
 
-        <div class="audio-wave-container" id="audio-anim">
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-            <div class="wave-bar"></div>
-        </div>
+      <div class="officer-avatar" style="margin-top: 50px; margin-bottom: 0px">
+        👮‍♂️
+      </div>
 
-        <div class="officer-avatar">👮‍♂️</div>
+      <div
+        class="audio-wave-container"
+        style="background-color: #ff2442"
+        id="audio-anim"
+      >
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+        <div class="wave-bar"></div>
+      </div>
 
-        <div class="question-box" id="q-box" onclick="toggleQuestionCard()">
-            <div id="q-hidden" class="click-hint">
-                <div style="font-size: 40px;">👁️</div>
-                <span>點擊查看問題</span>
-            </div>
-            <div id="q-text" class="question-content hidden"></div>
+      <div class="question-box" id="q-box" onclick="toggleQuestionCard()">
+        <div id="q-hidden" class="click-hint">
+          <div style="font-size: 40px">👁️</div>
+          <span>點擊查看問題</span>
         </div>
+        <div id="q-text" class="question-content hidden"></div>
+      </div>
 
-        <div class="controls-area">
-            <button class="btn round-btn" onclick="replayAudio()">🔊</button>
-            <button class="btn main-action-btn colorful" id="main-btn" onclick="handleMainAction()">
-                開始<br>面試
-            </button>
-            <button class="btn round-btn" id="btn-star" onclick="toggleBookmark()">☆</button>
-        </div>
+      <div class="controls-area">
+        <button class="btn round-btn" onclick="replayAudio()">
+          <svg
+            width="21"
+            height="18"
+            viewBox="0 0 21 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M17.72 3.86574C17.8606 3.72528 18.0512 3.6464 18.25 3.6464C18.4488 3.6464 18.6394 3.72528 18.78 3.86574L18.782 3.86774L18.785 3.86974L18.792 3.87674L18.812 3.89674L18.874 3.96574C18.924 4.02274 18.994 4.10374 19.075 4.20674C19.999 5.40771 20.5 6.88046 20.5 8.39574C20.5 9.91101 19.999 11.3838 19.075 12.5847C18.9912 12.6916 18.9032 12.795 18.811 12.8947L18.791 12.9147L18.785 12.9217L18.782 12.9237L18.781 12.9247L18.271 12.4167L18.781 12.9267C18.6403 13.0674 18.4495 13.1465 18.2505 13.1465C18.0515 13.1465 17.8607 13.0674 17.72 12.9267C17.5793 12.786 17.5003 12.5952 17.5003 12.3962C17.5003 12.1973 17.5793 12.0064 17.72 11.8657L17.719 11.8667L17.717 11.8677L17.722 11.8627L17.755 11.8267C17.787 11.7921 17.8333 11.7364 17.894 11.6597C18.5266 10.8339 18.9057 9.84202 18.9853 8.80473C19.0648 7.76745 18.8413 6.7294 18.342 5.81673C18.2116 5.57654 18.0618 5.34744 17.894 5.13174C17.8397 5.06156 17.7823 4.99382 17.722 4.92874L17.717 4.92374C17.5776 4.7828 17.4996 4.59238 17.5002 4.39412C17.5007 4.19585 17.5798 4.00588 17.72 3.86574ZM11.787 0.291735C12.95 -0.475265 14.5 0.359735 14.5 1.75274V16.0387C14.5 17.4327 12.95 18.2667 11.787 17.4997L5.787 13.5447C5.74641 13.5177 5.69879 13.5031 5.65 13.5027H2.75C2.02065 13.5027 1.32118 13.213 0.805456 12.6973C0.289731 12.1816 0 11.4821 0 10.7527V7.03873C0 6.30939 0.289731 5.60992 0.805456 5.09419C1.32118 4.57847 2.02065 4.28874 2.75 4.28874H5.65C5.69903 4.2889 5.74702 4.27464 5.788 4.24774L11.787 0.291735Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+        <button
+          class="btn main-action-btn colorful"
+          id="main-btn"
+          onclick="handleMainAction()"
+        >
+          開始<br />面試
+        </button>
+        <button class="btn round-btn" id="btn-star" onclick="toggleBookmark()">
+          ☆
+        </button>
+      </div>
 
-        <div class="bottom-actions">
-            <button class="btn rect-btn" onclick="exitPractice()">🚪 退出</button>
-            <button class="btn rect-btn" onclick="restartSession()">🔄 重來</button>
-        </div>
+      <div class="bottom-actions">
+        <button class="btn rect-btn" onclick="exitPractice()">
+          <svg
+            width="11"
+            height="12"
+            viewBox="0 0 11 15"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.82469 0.346603C8.75979 -0.281148 10.027 -0.0327773 10.6548 0.902267C11.2825 1.83732 11.033 3.10451 10.0981 3.73235L5.10887 7.08098L10.0981 10.4306C11.0331 11.0583 11.2824 12.3256 10.6548 13.2607C10.027 14.1958 8.75981 14.4449 7.82469 13.8173L0.903791 9.17082C0.199918 8.69829 -0.116296 7.8637 0.038557 7.08098C-0.115678 6.29863 0.200304 5.46438 0.903791 4.99211L7.82469 0.346603Z"
+              fill="white"
+            />
+          </svg>
+          退出
+        </button>
+        <button class="btn rect-btn" onclick="restartSession()">
+          <svg
+            width="15"
+            height="15"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M23.6094 14.5C23.6094 14.5521 23.6042 14.5885 23.5938 14.6094C22.9271 17.401 21.5312 19.6641 19.4062 21.3984C17.2812 23.1328 14.7917 24 11.9375 24C10.4167 24 8.94531 23.7135 7.52344 23.1406C6.10156 22.5677 4.83333 21.75 3.71875 20.6875L1.70312 22.7031C1.50521 22.901 1.27083 23 1 23C0.729167 23 0.494792 22.901 0.296875 22.7031C0.0989583 22.5052 0 22.2708 0 22V15C0 14.7292 0.0989583 14.4948 0.296875 14.2969C0.494792 14.099 0.729167 14 1 14H8C8.27083 14 8.50521 14.099 8.70312 14.2969C8.90104 14.4948 9 14.7292 9 15C9 15.2708 8.90104 15.5052 8.70312 15.7031L6.5625 17.8438C7.30208 18.5312 8.14062 19.0625 9.07812 19.4375C10.0156 19.8125 10.9896 20 12 20C13.3958 20 14.6979 19.6615 15.9062 18.9844C17.1146 18.3073 18.0833 17.375 18.8125 16.1875C18.9271 16.0104 19.2031 15.401 19.6406 14.3594C19.724 14.1198 19.8802 14 20.1094 14H23.1094C23.2448 14 23.362 14.0495 23.4609 14.1484C23.5599 14.2474 23.6094 14.3646 23.6094 14.5ZM24 2V9C24 9.27083 23.901 9.50521 23.7031 9.70312C23.5052 9.90104 23.2708 10 23 10H16C15.7292 10 15.4948 9.90104 15.2969 9.70312C15.099 9.50521 15 9.27083 15 9C15 8.72917 15.099 8.49479 15.2969 8.29688L17.4531 6.14062C15.9115 4.71354 14.0938 4 12 4C10.6042 4 9.30208 4.33854 8.09375 5.01562C6.88542 5.69271 5.91667 6.625 5.1875 7.8125C5.07292 7.98958 4.79688 8.59896 4.35938 9.64062C4.27604 9.88021 4.11979 10 3.89062 10H0.78125C0.645833 10 0.528646 9.95052 0.429688 9.85156C0.330729 9.7526 0.28125 9.63542 0.28125 9.5V9.39062C0.958333 6.59896 2.36458 4.33594 4.5 2.60156C6.63542 0.867188 9.13542 0 12 0C13.5208 0 15 0.289062 16.4375 0.867188C17.875 1.44531 19.151 2.26042 20.2656 3.3125L22.2969 1.29688C22.4948 1.09896 22.7292 1 23 1C23.2708 1 23.5052 1.09896 23.7031 1.29688C23.901 1.49479 24 1.72917 24 2Z"
+              fill="white"
+            />
+          </svg>
+          重來
+        </button>
+      </div>
     </div>
 
     <div id="bookmark-screen" class="hidden">
-        <div class="nav-bar">
-            <div class="nav-back" onclick="exitBookmarks()">←</div>
-            <div class="nav-title">收藏夾</div>
+      <div class="nav-bar">
+        <div class="nav-back" onclick="exitBookmarks()">←</div>
+        <div class="nav-title">收藏夾</div>
+      </div>
+      <div class="tabs">
+        <div class="tab" id="tab-personal" onclick="switchTab('personal')">
+          個人資料
         </div>
-        <div class="tabs">
-            <div class="tab" id="tab-personal" onclick="switchTab('personal')">個人資料</div>
-            <div class="tab" id="tab-part9" onclick="switchTab('part9')">Part 9</div>
-            <div class="tab" id="tab-glossary" onclick="switchTab('glossary')">名詞解釋</div>
+        <div class="tab" id="tab-part9" onclick="switchTab('part9')">
+          Part 9
         </div>
-        <div class="list-container" id="bookmark-list"></div>
+        <div class="tab" id="tab-glossary" onclick="switchTab('glossary')">
+          名詞解釋
+        </div>
+      </div>
+      <div class="list-container" id="bookmark-list"></div>
     </div>
 
     <script src="app.js"></script>
     <script>
-        // 如果你的 app.js 裡還沒有定義 goToXiaohongshu
-        function goToXiaohongshu() {
-            window.open('https://www.xiaohongshu.com/user/profile/631f3bfd00000000230254b1', '_blank');
-        }
+      // 如果你的 app.js 裡還沒有定義 goToXiaohongshu
+      function goToXiaohongshu() {
+        window.open(
+          "https://www.xiaohongshu.com/user/profile/631f3bfd00000000230254b1",
+          "_blank",
+        );
+      }
     </script>
-</body>
+  </body>
 </html>
